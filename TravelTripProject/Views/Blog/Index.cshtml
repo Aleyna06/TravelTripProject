@@ -40,15 +40,14 @@ License URL: http://creativecommons.org/licenses/by/3.0/
                 @foreach (var x in Model)
                 {
                     <div class="single-grid">
-                        <img src="~/web2/images/post1.jpg" alt="" />
-                        <a href="#">Pariste 1 gece geçirmek</a>
+
+                        <img src="@x.BlogImage" alt="" style="margin-bottom:20px" />
+                        <a href="#">@x.Baslik</a>
                         <p>
-                            Lorem Ipsum is simply dummy text of the printing and typesetting industry.
-                            Lorem Ipsum has been the industry's standard dummy text ever since the 1500s,
-                            when an unknown printer took a galley of type and scrambled it to make a type specimen book.
+                           @x.Aciklama
                         </p>
                     </div>
-                    <br/>
+
                 }
             </div>
 

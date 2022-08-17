@@ -13,7 +13,7 @@ namespace TravelTripProject.Controllers
         public ActionResult Index()
         {
             var bloglar = c.Blogs.ToList();
-            return View();
+            return View(bloglar);
         }
     }
 }
