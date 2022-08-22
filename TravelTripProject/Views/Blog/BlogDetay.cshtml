@@ -1,5 +1,6 @@
-﻿
-@{
+﻿@using TravelTripProject.Models.Siniflar
+@model List<Blog>
+@{ 
     ViewBag.Title = "BlogDetay";
     Layout = "~/Views/Shared/_TestLayout.cshtml";
 }
@@ -41,10 +42,16 @@ License URL: http://creativecommons.org/licenses/by/3.0/
         <div class="container">
             <div class="col-md-8 single-main">
                 <div class="single-grid">
-                    <img src="~/web2/images/post1.jpg" alt="" />
+                    @foreach (var x in Model)
+                    {
+
+                    <img src="@x.BlogImage" alt="" style="margin-bottom:20px"/>
+                    <h2>@x.Baslik</h2>
                     <p>
-                        Lorem Ipsum is simply dummy
+                        @x.Aciklama
                     </p>
+
+                    }
                 </div>
                 <ul class="comment-list">
                     <li>
@@ -67,13 +74,13 @@ License URL: http://creativecommons.org/licenses/by/3.0/
                 </ul>
 
                 <div class="content-form">
-                    <h3>Leave a comment</h3>
+                    <h3>Bir Yorum Yapın</h3>
                     <form>
-                        <input type="text" placeholder="Name" required />
-                        <input type="text" placeholder="Email" required />
-                        <input type="text" placeholder="Phone" required />
-                        <textarea placeholder="Message"></textarea>
-                        <input type="submit" value="SEND" />
+                        <input type="text" placeholder="Kullanıcı Adı" required />
+                        <input type="text" placeholder="Mail Adresi" required />
+                       
+                        <textarea placeholder="Yorum"></textarea>
+                        <input type="submit" value="Gönder" />
                     </form>
                 </div>
             </div>
