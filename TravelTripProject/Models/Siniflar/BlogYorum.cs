@@ -9,6 +9,7 @@ namespace TravelTripProject.Models.Siniflar
     {
         public IEnumerable<Blog> Deger1 { get; set; }
         public IEnumerable<Yorumlar> Deger2 { get; set; }
+        public IEnumerable<Blog> Deger3 { get; set; }
     }
     //Ienumerable bir tabloda birden fazla değer çekmeye yarar
 }
