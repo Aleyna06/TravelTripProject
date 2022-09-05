@@ -30,5 +30,10 @@ namespace TravelTripProject.Controllers
             var degerler = c.Blogs.Where(x => x.ID == 1).ToList();
             return PartialView(degerler);
         }
+        public PartialViewResult Partial3()
+        {
+            var deger = c.Blogs.ToList();
+            return PartialView(deger);
+        }
     }
 }
