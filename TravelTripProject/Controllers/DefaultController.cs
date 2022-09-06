@@ -12,7 +12,7 @@ namespace TravelTripProject.Controllers
         Context c = new Context();
         public ActionResult Index()
         {
-            var degerler = c.Blogs.ToList();
+            var degerler = c.Blogs.Take(4).ToList();
             return View(degerler);
         }
         public ActionResult About()
